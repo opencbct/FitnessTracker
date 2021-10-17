@@ -12,8 +12,9 @@ app.use(logger("dev"));
 // Allows to parse the encoded From data
 
 app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
 
+ // Automatically Parses JSON data for us
+app.use(express.json());
 
 
 app.use(express.static("public"));
