@@ -16,7 +16,7 @@ app.use(express.urlencoded({ extended: true }));
  // Automatically Parses JSON data for us
 app.use(express.json());
 
-
+// Sets aside a static assets foleder for static content
 app.use(express.static("public"));
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
