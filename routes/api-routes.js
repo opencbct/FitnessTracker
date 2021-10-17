@@ -3,7 +3,7 @@ const apiRouter = require("express").Router();
 const db = require("../models");
 
 apiRouter.get("/api/workouts", (req, res) => {
-    console.log("For init function & getLastWorkout Router");
+    // console.log("For init function & getLastWorkout Router");
 
     db.Workout.aggregate([
         {
@@ -12,14 +12,14 @@ apiRouter.get("/api/workouts", (req, res) => {
             }
         }
     ]).then(result => {
-        console.log("Result of Aggregate");
-        console.log(result);
+        // console.log("Result of Aggregate");
+        // console.log(result);
         res.json(result);
     });
 });
 
 apiRouter.get("/api/workouts/range", (req, res) => {
-    console.log("Dash Board to get all information");
+    // console.log("Dash Board to get all information");
    
     db.Workout.aggregate([
         {
